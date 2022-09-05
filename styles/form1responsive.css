@@ -1,0 +1,80 @@
+@media screen and (max-width: 390px) {
+    .container{
+        width: 390;
+        height: auto;
+    }
+
+    .laptop-feature{
+        display: none;
+    }
+
+    
+    .progress-bar{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .progress-bar h1{
+        font-weight: 700;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .employ-info::after{
+        background-color: none;
+        content: "1/2";
+        left: 50%;
+        width: 0;
+        height: 0;
+        
+    }
+
+    form{
+        
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    .text-inputs{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .input{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        border: 2px solid #62A1EB;
+        
+        border-radius: 5px;
+        padding: 15px 20px;
+        font-size: 15px;
+        
+        
+    }
+
+    .next-btn{
+        width: 120px;
+        height: 40px;
+        background: #62A1EB;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-top: 100px;
+      }
+    
+      .redberry-logo-2{
+        display: none;
+      }
+}
+

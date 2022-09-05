@@ -1,0 +1,61 @@
+* {
+    font-family: 'Nunito', 'Open Sans', sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+}
+
+
+.container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*landing page images*/
+.redberry{
+    margin-bottom: 110px;
+    width: 112px;
+    height: 18px;
+}
+
+.landing-page-image{
+    width: 781px;
+    height: 482px;
+    
+
+}
+
+/*buttons*/
+.buttons{
+    margin-top: 150px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    padding: 18px 60px;
+    width: 387px;
+    height: 60px;
+    background: #62A1EB;
+    border-radius: 8px;
+}
+
+.btn a{
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    height: 100%;
+}
+
+
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/forms2.css">
+    <link rel="stylesheet" href="./styles/form2responsive.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <h1 class="employ-info">თანამშრომლის ინფო</h1>
+            <h1 class="laptop-feature">ლეპტოპის მახასიათებლები</h1>
+        </div>
+        <form  action="landingPage.html"> 
+            <div class="image-input-container">
+                <p>ჩააგდე ან ატვირთე<br> ლეპტოპის ფოტო</p>
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-image-btn" type="button">ატვირთე</button>
+                
+            </div>
+            <div class="inputs">
+                <div class="input-container">
+                    <label for="laptop-name" class="some">ლეპტოპის სახელი</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="laptop-name" 
+                     name="laptop-name" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="name-notice some">ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
+                </div>
+                <div class="dropdown dropdown3" onclick="saveDropdownValue(this)">
+                    <h2 class="h2 input-error" id="laptop-brand" >ლეპტოპის ბრენდი</h2>
+                    <ul class="third-dropdown-options dropdown-options">
+                      <!--<li>beginner</li>
+                      <li>intermediate</li>
+                      <li>professional</li>-->
+                    </ul>
+                  </div>
+            </div>
+            <div class="border"></div>
+            <div class="inputs inputs2">
+                <div class="dropdown dropdown4" onclick="saveDropdownValue(this)">
+                    <h2 class="h2 input-error" id="cpu" >CPU</h2>
+                    <ul class="fourth-dropdown-options dropdown-options">
+                      <!--<li>beginner</li>
+                      <li>intermediate</li>
+                      <li>professional</li>-->
+                    </ul>
+                </div>
+                <div class="input-container">
+                    <label for="cpu-core" class="some">CPU-ს ბირთვი</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="cpu-core" 
+                     name="cpu-core" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    
+                    >
+                    <p class="name-notice some">მხოლოდ ციფრები</p>
+                </div>
+                <div class="input-container">
+                    <label for="cpu-stream" class="some">CPU-ს ნაკადი</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="cpu-stream" 
+                     name="cpu-stream" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    
+                    >
+                    <p class="name-notice some">მხოლოდ ციფრები</p>
+                </div>
+            </div>
+            <div class="inputs inputs3">
+                
+                <div class="input-container">
+                    <label for="laptop-ram" class="some">ლეპტოპის RAM (GB)</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="laptop-ram" 
+                     name="laptop-ram" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="name-notice some">მხოლოდ ციფრები</p>
+                </div>
+                <div class="radio-input-container">
+                    <h1 class="radio-input-name input-error" id="memory-type">მეხსიერების ტიპი</h1>
+                    <div class="radio-inputs">
+                        <div class="radio-items">
+                            <input type="radio" id="ssd" name="memory-type" value="ssd" onclick="checkRadioInput()">
+                            <label for="ssd">SSD</label>
+                        </div>
+                        <div class="radio-items">
+                            <input type="radio" id="hdd" name="memory-type" value="hdd" onclick="checkRadioInput()">
+                            <label for="hdd">HDD</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="inputs inputs4">
+                <div class="input-container">
+                    <label for="cpu-core" class="some">შეძენის რიცხვი (არჩევითი)</label>
+                    <input 
+                     type="text" 
+                     class="input input-error"
+                     onfocus="(this.type='date')"
+                     onfocusout="(this.type='text')" 
+                     id="data" 
+                     name="data" 
+                     autocomplete="off"
+                    >
+                </div>
+                <div class="input-container" >
+                    <label for="cpu-stream" class="some">ლეპტოპის ფასი</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="price" 
+                     name="price" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="name-notice some">მხოლოდ ციფრები</p>
+                </div>
+            </div>
+            <div class="radio-input-container radio-input-container2">
+                <h1 class="radio-input-name input-error" id="laptop-condition">ლეპტოპის მდგომარეობა</h1>
+                <div class="radio-inputs">
+                    <div class="radio-items">
+                        <input type="radio" id="newLaptop" name="laptop-condition" value="ახალი" onclick="checkRadioInput2()">
+                        <label for="newLaptop" >ახალი</label>
+                    </div>
+                    <div class="radio-items">
+                        <input type="radio" id="oldLaptop" name="laptop-condition" value="ძველი" onclick="checkRadioInput2()">
+                        <label for="oldLaptop">მეორადი</label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                
+                <a href="#" class="btn prev-btn">უკან</a>
+                <input type="submit" class="btn save-btn" value="დამახსოვრება">
+            </div>
+        </form>
+        <img src="images/redberry logo 2.svg" class="redberry-logo-2">
+    </div>
+
+
+    
+    <script src="./scripts/dropdown.js"></script>
+    <script src="./scripts/sessionstorage2.js"></script>
+    <script src="./scripts/chooseimage.js"></script>
+    <script src="./scripts/secondstep.js"></script>
+    
+</body>
+</html>

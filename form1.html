@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/forms.css">
+    <link rel="stylesheet" href="./styles/form1responsive.css">
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <h1 class="employ-info">თანამშრომლის ინფო</h1>
+            <h1 class="laptop-feature">ლეპტოპის მახასიათებლები</h1>
+            
+        </div>
+        <form action="form2.html">
+            <div class="text-inputs">
+                <div class="input-container ">
+                    <label for="name" class="some">სახელი</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="name" 
+                     name="name" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="name-notice some">მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+                </div>
+                <div class="input-container">
+                    <label for="lastname" class="some">გვარი</label>
+                    <input 
+                     type="text" 
+                     class="input input-error" 
+                     id="lastname" 
+                     name="lastname" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="lastname-notice some">მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+                </div>
+            </div>
+            <div class="dropdowns">
+                <div class="dropdown dropdown1 " onclick="saveDropdownValue(this)">
+                    <h2 class="h2 input-error" id="team">თიმი</h2>
+                    <ul class="first-dropdown-options dropdown-options">
+                      <!--<li>beginner</li>
+                      <li>intermediate</li>
+                      <li>professional</li>-->
+                    </ul>
+                  </div>
+                  <div class="dropdown dropdown2 " onclick="saveDropdownValue(this)">
+                    <h2 class="h2 input-error" id="position">პოზიცია</h2>
+                    <ul class="second-dropdown-options dropdown-options ">
+                      <!--<li>beginner</li>
+                      <li>intermediate</li>
+                      <li>professional</li>-->
+                    </ul>
+                  </div>
+            </div>
+            <div class="text-inputs-2">
+                <div class="input-container">
+                    <label for="email" class="some">სახელი</label>
+                    <input 
+                     type="email" 
+                     class="input input2 input-error" 
+                     id="email" 
+                     name ="email" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="email-notice some">უნდა მთავრდებოდეს @redberry.ge-ით</p>
+                </div>
+                <div class="input-container" style="margin-top: 40px;">
+                    <label for="phone" class="some">ტელეფონის ნომერი</label>
+                    <input 
+                     type="tel" 
+                     class="input input2 input-error" 
+                     id="phone" 
+                     name ="phone" 
+                     autocomplete="off"
+                     onkeyup="saveValue(this)"
+                    >
+                    <p class="phone-notice some">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</p>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="next-btn" type="submit">შემდეგი</button>
+            </div>
+        </form>
+        <img src="images/redberry logo 2.svg" class="redberry-logo-2">
+    </div>
+
+
+
+    
+    <script src="./scripts/dropdown.js"></script>
+    <script src="./scripts/firststep.js"></script>
+    <script src="./scripts/sessionstorage.js"></script>
+</body>
+</html>
